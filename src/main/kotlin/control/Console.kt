@@ -1,6 +1,6 @@
 package control
 
-class Console private constructor(){
+class Console private constructor() {
 
     companion object {
         fun readInt(msg: String): Int {
@@ -10,8 +10,8 @@ class Console private constructor(){
                 print(msg)
                 val response = readlnOrNull()
 
-                if (response != null && response != "" ) {
-                    convertResponse = response.toIntOrNull();
+                if (response != null && response != "") {
+                    convertResponse = response.toIntOrNull()
 
                     if (convertResponse == null || convertResponse <= 0) {
                         println("Valor inválido, informe corretamente.")
@@ -22,7 +22,7 @@ class Console private constructor(){
 
             } while (convertResponse == null || convertResponse <= 0)
 
-            return  convertResponse;
+            return convertResponse
         }
 
         fun readString(msg: String): String {
@@ -32,7 +32,7 @@ class Console private constructor(){
                 print(msg)
                 val response = readlnOrNull()
 
-                if (response != null && response != "" ) {
+                if (response != null && response != "") {
                     convertResponse = response.lowercase()
 
                 } else {
